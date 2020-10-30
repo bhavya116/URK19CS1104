@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ENQUEUE</title>
+<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<header>
+
+		<div >
+		<ul class="main-nav">
+			<li ><a href="./index.html"> HOME </a></li>
+			<li class="active"><a href="./enqueue.html"> ENQUEUE </a></li>
+			<li><a href="./dequeue.html"> DEQUEUE </a></li>
+			<li><a href="./display.html"> DISPLAY </a></li>	
+		</ul>
+			
+		</div>
+	</header>
+	<div>
+		<h2>Enqueue</h2>	
+		<br>
+	</div>
+	<p class="margin">Queues maintain two data pointers, front and rear. Therefore, its operations are comparatively difficult to implement than that of stacks.</p>
+	<br>
+	<center>
+	<img src="nqdq.gif" style="width: 400px;height: 200px; box-shadow: 10px 10px 10px 0px rgba(255,255,255,0.3)" >
+	</center>
+	<br>
+	<h3 class="margin">ALGORITHM</h3>
+	<br>
+	<p class="margin">
+		Step 1  Check if the queue is full.<br>
+		Step 2  If the queue is full, produce overflow error and exit.<br>
+		Step 3  If the queue is not full, increment rear pointer to point the next empty space.<br>
+		Step 4  Add data element to the queue location, where the rear is pointing.<br>
+		Step 5  return success
+	</p>
+	<br>
+	<h3 class="margin">Implementation of enqueue() in C programming language </h3>
+	<br>
+		<p class="margin">
+<pre class="margin">
+void enQueue(int value)
+{
+    if(rear==size-1)
+    {
+        printf("Queue is full\n");
+    }
+    else
+    {
+        if(front == -1)
+        {
+            front = 0;
+
+        }
+        rear++;
+        queue1[rear]=value;
+    }
+}
+</pre>
+</p>
+<br>
+<h3 class="margin">Time complexity</h3>
+<br>
+
+<table>
+	<tr>
+		<th>Operations</th>
+		<th>Best case</th>
+		<th>Worst case</th>
+	</tr>
+	<tr>
+		<td>Enqueue</td>
+		<td>O(1)</td>
+		<td>O(1)</td>
+	</tr>
+	<tr>
+		<td>Space complexity</td>
+		<td>O(n)</td>
+		<td>O(n)</td>
+	</tr>
+
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<h4>URK19CS1104&nbsp;&nbsp;ARUMULLA BHAVYASAI</h4>	
+		<br>
+
+</body>
+</html>
